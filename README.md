@@ -7,17 +7,21 @@ The aim of this project was to find the optimal weights for a portfolio consisti
 # Description
 
 According to the Modern Portfolio Theory Expected Return $E(R_p)$ and Variance $\sigma^2_p$ are given by formulas
+
 $$
 \begin{align*}
 E(R_p) = \boldsymbol{w}^{\top}\boldsymbol{\mu}, \\
 \sigma^2_p = \boldsymbol{w}^{\top}\boldsymbol{\Sigma}\boldsymbol{w},
 \end{align*}
 $$
+
 where $\boldsymbol{w}$ is a vector of weights, $\boldsymbol{\mu}$ is a vector of expected returns on single stocks and $\boldsymbol{\Sigma}$ is a covariance matrix.
 Optimization was performed by minimizing risk (variance) for given expected returns (between returns of the best and the least performing stocks). Optimized portfolios formed an efficient frontier which allowed to find the Capital Allocation Line and the Sharpe Ratio $S$ defined by
+
 $$
 S = \frac{R_j - R_f}{\sigma_j},
 $$
+
 where $R_j$ is a rate of return of a portfolio, $R_f$ is a risk free rate of return and $\sigma_j$ is the standard deviation of the portfolio.
 Data was retrieved using `yfinance` and analyzed using `pandas` and `scipy`. 
 
